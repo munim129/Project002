@@ -14,7 +14,9 @@ function Room() {
         <br/>
         Temperature: {temp}
         <br/>
-        <button onClick={() => setLit(!isLit)} >Toggle Light</button>
+        <button onClick={() => setLit(true)} >Light on</button>
+        <br/>
+        <button onClick={() => setLit(false)} >Light off</button>
         <br/>
         <button onClick={ ()=> {
                         console.log("Increase age arrow function");
@@ -25,12 +27,13 @@ function Room() {
         <br/>
         <button onClick={() => {
                         console.log("increase temp arrow function");
-                        setTemp(++temp);
-                        }}></button>
+                        setTemp(--temp);
+          
+                        }}>Decrease Temperature</button>
         
         <button onClick={ ()=> {
                         console.log("Increase temp arrow function");
-                        setTemp(--temp);
+                        setTemp(++temp);
                         }}>
             Increase Temperature
             </button>
